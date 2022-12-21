@@ -1,0 +1,17 @@
+.button {
+  border: 0;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background: radial-gradient(circle, red, white);
+  transition: box-shadow 0.5s linear;
+  box-shadow: 5px 5px black;
+
+  &:hover {
+    box-shadow: 8px 8px black;
+  }
+
+  &--clicked {
+    box-shadow: none;
+  }
+}
