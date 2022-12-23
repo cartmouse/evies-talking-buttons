@@ -8,6 +8,8 @@
 
 .button-container {
   display: grid;
+  grid-template-columns: auto auto;
+  gap: 5vh;
   justify-content: center;
   align-items: center;
   margin: 5vh 0;

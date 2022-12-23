@@ -1,1 +1,1 @@
-declare module "*.aiff";
+declare module "*.m4a";

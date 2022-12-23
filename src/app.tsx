@@ -5,7 +5,18 @@ import buttons from "./buttons";
 
 export function App() {
   const buttonMap = useMemo(
-    () => Object.keys(buttons).map((button) => <Button text={button} />),
+    () =>
+      Object.keys(buttons).map((button) => {
+        const { audio, color, textColor } = buttons[button];
+        return (
+          <Button
+            text={button}
+            onClick={() => audio.play()}
+            color={color}
+            textColor={textColor}
+          />
+        );
+      }),
     []
   );
 
