@@ -1,4 +1,4 @@
-import Test from "./assets/Test.m4a";
+import { cuddles, hungry, scritches } from "./assets";
 
 interface Button {
   color: string;
@@ -7,9 +7,13 @@ interface Button {
 }
 
 const buttons: { [key: string]: Button } = {
-  scritches: { color: "#902000", textColor: "white", audio: new Audio(Test) },
-  cuddles: { color: "#008045", textColor: "white", audio: new Audio(Test) },
-  hungry: { color: "#3900c3", textColor: "white", audio: new Audio(Test) },
+  scritches: {
+    color: "#902000",
+    textColor: "white",
+    audio: new Audio(scritches),
+  },
+  cuddles: { color: "#008045", textColor: "white", audio: new Audio(cuddles) },
+  hungry: { color: "#3900c3", textColor: "white", audio: new Audio(hungry) },
 };
 
 export default buttons;
