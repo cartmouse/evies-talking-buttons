@@ -1,5 +1,5 @@
 import "./Button.scss";
-import { useMemo, useState } from "preact/hooks";
+import { useEffect, useMemo, useRef, useState } from "preact/hooks";
 
 interface ButtonProps {
   text: string;
@@ -14,26 +14,33 @@ export default function Button({
   color,
   textColor,
 }: ButtonProps) {
-  const [classes, setClasses] = useState("button");
+  const [clicked, setClicked] = useState(false);
   const newText = useMemo(() => text[0].toUpperCase() + text.slice(1), [text]);
+  const timeout = useRef(NaN);
 
-  const clicked = () => {
+  const click = () => {
     if (onClick) {
       onClick();
     }
-    setClasses("button button--clicked");
-    setTimeout(() => {
-      setClasses("button");
+    setClicked(true);
+    timeout.current = setTimeout(() => {
+      setClicked(false);
     }, 1000);
   };
 
+  useEffect(() => {
+    return () => clearTimeout(timeout.current);
+  }, []);
+
   return (
-    <button
-      class={classes}
-      onClick={clicked}
-      style={{ backgroundColor: color, color: textColor ?? "black" }}
-    >
-      {newText}
-    </button>
+    <div class={"button-pad"}>
+      <button
+        class={`button ${clicked ? "button--clicked" : ""}`}
+        onClick={click}
+        style={{ backgroundColor: color, color: textColor ?? "black" }}
+      >
+        {newText}
+      </button>
+    </div>
   );
 }

@@ -1,16 +1,20 @@
+$time: 0.2s;
+$dist: 5px;
+
 .button {
+  position: relative;
   border: 0;
   width: 10vh;
   height: 10vh;
   border-radius: 50%;
-  transition: box-shadow 0.5s linear;
-  box-shadow: 5px 5px black;
-
-  &:hover {
-    box-shadow: 8px 8px black;
-  }
+  left: 0;
+  top: 0;
+  transition: box-shadow $time linear, left $time linear, top $time linear;
+  box-shadow: $dist $dist black;
 
   &--clicked {
     box-shadow: none;
+    left: $dist;
+    top: $dist;
   }
 }
