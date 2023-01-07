@@ -8,12 +8,7 @@ interface ButtonProps {
   textColor?: string;
 }
 
-export default function Button({
-  text,
-  onClick,
-  color,
-  textColor,
-}: ButtonProps) {
+export default function Button({ text, onClick, color }: ButtonProps) {
   const [clicked, setClicked] = useState(false);
   const newText = useMemo(() => text[0].toUpperCase() + text.slice(1), [text]);
   const timeout = useRef(NaN);
@@ -37,7 +32,7 @@ export default function Button({
       <button
         class={`button ${clicked ? "button--clicked" : ""}`}
         onClick={click}
-        style={{ backgroundColor: color, color: textColor ?? "black" }}
+        style={{ backgroundColor: color }}
       >
         {newText}
       </button>

@@ -1,9 +1,12 @@
+@use "./index.scss";
+
 #app {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 .button-container {
@@ -18,7 +21,22 @@
 .title {
   text-align: center;
   font-size: 2rem;
-  color: white;
   text-shadow: 0 0 2px black;
   margin: 2vh 0;
+}
+
+.ui-button {
+  background-color: adjust-color(
+    $color: index.$backgroundColor,
+    $lightness: 10%
+  );
+  height: 5vh;
+  width: 20vw;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  color: white;
+  font-size: 1.5rem;
+  font-family: index.$font;
+  font-weight: 300;
 }

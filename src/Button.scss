@@ -1,3 +1,5 @@
+@use "./index.scss";
+
 $time: 0.2s;
 $dist: 5px;
 
@@ -11,6 +13,9 @@ $dist: 5px;
   top: 0;
   transition: box-shadow $time linear, left $time linear, top $time linear;
   box-shadow: $dist $dist black;
+
+  font-family: index.$font;
+  font-weight: 300;
 
   &--clicked {
     box-shadow: none;

@@ -1,19 +1,18 @@
 import { useMemo } from "preact/hooks";
 import "./app.scss";
 import Button from "./Button";
-import buttons from "./buttons";
+import { buttons, colors } from "./buttons";
 
 export function App() {
   const buttonMap = useMemo(
     () =>
-      Object.keys(buttons).map((button) => {
-        const { utterance, color, textColor } = buttons[button];
+      buttons.map((button, index) => {
+        const utterance = new SpeechSynthesisUtterance(button);
         return (
           <Button
             text={button}
             onClick={() => speechSynthesis.speak(utterance)}
-            color={color}
-            textColor={textColor}
+            color={colors[index]}
           />
         );
       }),
@@ -28,6 +27,7 @@ export function App() {
         Talking Buttons
       </div>
       <div class="button-container">{buttonMap}</div>
+      <button class="ui-button">Settings</button>
     </div>
   );
 }
