@@ -1,0 +1,13 @@
+@use "./app.scss";
+@use "./index.scss";
+
+.custom-button-input {
+  @include app.rect;
+}
+
+.stored-button-container {
+  margin: 0 2vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2vw;
+}

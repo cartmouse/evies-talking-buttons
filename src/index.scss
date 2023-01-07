@@ -1,4 +1,8 @@
 $backgroundColor: #033f63;
+$lighterBackground: adjust-color(
+  $color: $backgroundColor,
+  $lightness: 10%,
+);
 $font: "Overpass", sans-serif;
 
 body {

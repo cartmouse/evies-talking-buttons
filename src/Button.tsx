@@ -10,7 +10,6 @@ interface ButtonProps {
 
 export default function Button({ text, onClick, color }: ButtonProps) {
   const [clicked, setClicked] = useState(false);
-  const newText = useMemo(() => text[0].toUpperCase() + text.slice(1), [text]);
   const timeout = useRef(NaN);
 
   const click = () => {
@@ -20,7 +19,7 @@ export default function Button({ text, onClick, color }: ButtonProps) {
     setClicked(true);
     timeout.current = setTimeout(() => {
       setClicked(false);
-    }, 1000);
+    }, 500);
   };
 
   useEffect(() => {
@@ -34,7 +33,7 @@ export default function Button({ text, onClick, color }: ButtonProps) {
         onClick={click}
         style={{ backgroundColor: color }}
       >
-        {newText}
+        {text}
       </button>
     </div>
   );
