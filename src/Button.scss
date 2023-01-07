@@ -14,6 +14,8 @@ $dist: 5px;
   transition: box-shadow $time linear, left $time linear, top $time linear;
   box-shadow: $dist $dist black;
 
+  color: black;
+
   font-family: index.$font;
   font-weight: 300;
 

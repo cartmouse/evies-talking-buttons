@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { useNavigate } from "react-router-dom";
 import { buttons } from "./Home";
 
@@ -43,7 +43,7 @@ export default function Settings() {
           Reset
         </button>
       </div>
-      <div class="stored-button-container">
+      <div class="stored-button-container scrollable">
         {storedButtons.map((button, index) => (
           <input
             class="custom-button-input"

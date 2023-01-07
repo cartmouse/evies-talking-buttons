@@ -14,14 +14,16 @@ $width: 20vw;
 
 .button-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 5vh;
   justify-content: center;
   align-items: center;
-  margin: 5vh 0;
+  padding: 0 2vw 1vh 2vw;
+  overflow: scroll;
 }
 
 .title {
+  position: sticky;
   text-align: center;
   font-size: 2rem;
   text-shadow: 0 0 2px black;
@@ -29,15 +31,14 @@ $width: 20vw;
 }
 
 @mixin rect {
-  min-height: 5vh;
   min-width: 20vw;
   border: none;
   border-radius: 5px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-family: index.$font;
   font-weight: 300;
   margin: 1vh 0;
-  padding: 10px 20px;
+  padding: 10px 5px;
 }
 
 @mixin button {
@@ -45,10 +46,12 @@ $width: 20vw;
   box-shadow: 0 0 5px
     adjust-color($color: index.$backgroundColor, $lightness: -10%);
   background-color: index.$lighterBackground;
+  padding: 10px 20px;
 }
 
 .ui-button {
   @include button;
   @include rect;
   color: white;
+  margin: 3vh 0;
 }
