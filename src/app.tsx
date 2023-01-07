@@ -7,11 +7,11 @@ export function App() {
   const buttonMap = useMemo(
     () =>
       Object.keys(buttons).map((button) => {
-        const { audio, color, textColor } = buttons[button];
+        const { utterance, color, textColor } = buttons[button];
         return (
           <Button
             text={button}
-            onClick={() => audio.play()}
+            onClick={() => speechSynthesis.speak(utterance)}
             color={color}
             textColor={textColor}
           />
