@@ -36,7 +36,7 @@ export function Home() {
   return (
     <>
       <div class="title">
-        Eva's
+        Evie's
         <br />
         Talking Buttons
       </div>
