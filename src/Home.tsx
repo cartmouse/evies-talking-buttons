@@ -3,7 +3,7 @@ import randomColor from "randomcolor";
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-export const buttons = ["Scritches", "Cuddles", "Hungry", "Happy"];
+export const buttons = ["Hello", "Feeling non-verbal", "Hungry", "Happy"];
 
 export function Home() {
   const nav = useNavigate();
