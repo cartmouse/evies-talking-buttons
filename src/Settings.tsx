@@ -52,9 +52,11 @@ export default function Settings() {
           ></input>
         ))}
       </div>
-      <button class="ui-button" onClick={() => nav("/")}>
-        Home
-      </button>
+      <div class="stored-button-container">
+        <button class="ui-button" onClick={() => nav("/")}>
+          Home
+        </button>
+      </div>
     </>
   );
 }

@@ -1,5 +1,5 @@
 import "./Button.scss";
-import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 
 interface ButtonProps {
   text: string;

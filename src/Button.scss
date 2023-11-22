@@ -8,20 +8,33 @@ $dist: 5px;
   border: 0;
   width: 10vh;
   height: 10vh;
+  min-width: 5rem;
+  min-height: 5rem;
   border-radius: 50%;
   left: 0;
   top: 0;
   transition: box-shadow $time linear, left $time linear, top $time linear;
-  box-shadow: $dist $dist black;
+  box-shadow: 0px $dist 5px black;
+  cursor: pointer;
 
   color: black;
 
   font-family: index.$font;
   font-weight: 300;
 
+  font-size: 1rem;
+
+  &:hover {
+    box-shadow: 0px $dist * 2 5px black;
+    top: -$dist;
+  }
+
   &--clicked {
     box-shadow: none;
-    left: $dist;
     top: $dist;
+    &:hover {
+      box-shadow: none;
+      top: $dist;
+    }
   }
 }

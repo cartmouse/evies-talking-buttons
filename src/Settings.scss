@@ -6,10 +6,14 @@
 }
 
 .stored-button-container {
-  margin: 0 2vw;
+  width: 95vw;
+  max-width: 1000px;
+  margin: 0.5rem 0;
   display: grid;
-  grid-template-columns: auto auto;
-  gap: 2vw;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .scrollable {

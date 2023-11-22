@@ -14,11 +14,13 @@ $width: 20vw;
 
 .button-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  width: 95vw;
+  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, 10vh);
   gap: 5vh;
   justify-content: center;
   align-items: center;
-  padding: 0 2vw 1vh 2vw;
+  padding: 1rem 0;
   overflow: scroll;
 }
 
@@ -31,7 +33,6 @@ $width: 20vw;
 }
 
 @mixin rect {
-  min-width: 20vw;
   border: none;
   border-radius: 5px;
   font-size: 1.3rem;
@@ -53,5 +54,11 @@ $width: 20vw;
   @include button;
   @include rect;
   color: white;
-  margin: 3vh 0;
+  cursor: pointer;
+  transition: 0.2s linear background-color;
+  width: 100%;
+
+  &:hover {
+    background-color: darken($color: index.$lighterBackground, $amount: 5);
+  }
 }

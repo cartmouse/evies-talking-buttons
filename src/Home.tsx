@@ -35,15 +35,13 @@ export function Home() {
 
   return (
     <>
-      <div class="title">
-        Evie's
-        <br />
-        Talking Buttons
-      </div>
+      <div class="title">Evie's Talking Buttons</div>
       <div class="button-container">{buttonMap}</div>
-      <button class="ui-button" onClick={() => nav("/settings")}>
-        Settings
-      </button>
+      <div class="stored-button-container">
+        <button class="ui-button" onClick={() => nav("/settings")}>
+          Settings
+        </button>
+      </div>
     </>
   );
 }
