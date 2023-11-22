@@ -3,6 +3,7 @@
 
 .custom-button-input {
   @include app.rect;
+  margin: 0 0.5rem;
 }
 
 .stored-button-container {
@@ -17,5 +18,6 @@
 }
 
 .scrollable {
-  overflow: auto;
+  @include app.inset-box;
+  padding: 1rem 0;
 }

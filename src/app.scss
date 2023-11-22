@@ -12,16 +12,23 @@ $width: 20vw;
   color: white;
 }
 
+@mixin inset-box {
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px black;
+  background-color: darken($color: index.$backgroundColor, $amount: 5);
+  overflow: scroll;
+}
+
 .button-container {
+  @include inset-box;
   display: grid;
   width: 95vw;
   max-width: 1000px;
-  grid-template-columns: repeat(auto-fit, 10vh);
-  gap: 5vh;
+  grid-template-columns: repeat(auto-fit, 13vh);
+  gap: 1rem;
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  overflow: scroll;
 }
 
 .title {
@@ -38,7 +45,6 @@ $width: 20vw;
   font-size: 1.3rem;
   font-family: index.$font;
   font-weight: 300;
-  margin: 1vh 0;
   padding: 10px 5px;
 }
 
@@ -47,7 +53,6 @@ $width: 20vw;
   box-shadow: 0 0 5px
     adjust-color($color: index.$backgroundColor, $lightness: -10%);
   background-color: index.$lighterBackground;
-  padding: 10px 20px;
 }
 
 .ui-button {
@@ -56,7 +61,6 @@ $width: 20vw;
   color: white;
   cursor: pointer;
   transition: 0.2s linear background-color;
-  width: 100%;
 
   &:hover {
     background-color: darken($color: index.$lighterBackground, $amount: 5);
