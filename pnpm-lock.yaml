@@ -20,7 +20,7 @@ importers:
     devDependencies:
       '@preact/preset-vite':
         specifier: ^2.4.0
-        version: 2.6.0(@babel/core@7.23.2)(preact@10.18.1)(vite@4.5.2(sass@1.69.4))
+        version: 2.6.0(@babel/core@7.23.2)(preact@10.18.1)(vite@4.5.5(sass@1.69.4))
       '@types/randomcolor':
         specifier: ^0.5.7
         version: 0.5.8
@@ -31,8 +31,8 @@ importers:
         specifier: ^4.9.3
         version: 4.9.5
       vite:
-        specifier: ^4.5.2
-        version: 4.5.2(sass@1.69.4)
+        specifier: ^4.5.5
+        version: 4.5.5(sass@1.69.4)
 
 packages:
 
@@ -601,8 +601,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  vite@4.5.2:
-    resolution: {integrity: sha512-tBCZBNSBbHQkaGyhGCDUGqeo2ph8Fstyp6FMSvTtsXeZSPpSMGlviAOav2hxVTqFcx8Hj/twtWKsMJXNY0xI8w==}
+  vite@4.5.5:
+    resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -872,18 +872,18 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  '@preact/preset-vite@2.6.0(@babel/core@7.23.2)(preact@10.18.1)(vite@4.5.2(sass@1.69.4))':
+  '@preact/preset-vite@2.6.0(@babel/core@7.23.2)(preact@10.18.1)(vite@4.5.5(sass@1.69.4))':
     dependencies:
       '@babel/core': 7.23.2
       '@babel/plugin-transform-react-jsx': 7.22.15(@babel/core@7.23.2)
       '@babel/plugin-transform-react-jsx-development': 7.22.5(@babel/core@7.23.2)
-      '@prefresh/vite': 2.4.1(preact@10.18.1)(vite@4.5.2(sass@1.69.4))
+      '@prefresh/vite': 2.4.1(preact@10.18.1)(vite@4.5.5(sass@1.69.4))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.23.2)
       debug: 4.3.4
       kolorist: 1.8.0
       resolve: 1.22.8
-      vite: 4.5.2(sass@1.69.4)
+      vite: 4.5.5(sass@1.69.4)
     transitivePeerDependencies:
       - preact
       - supports-color
@@ -896,7 +896,7 @@ snapshots:
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.1(preact@10.18.1)(vite@4.5.2(sass@1.69.4))':
+  '@prefresh/vite@2.4.1(preact@10.18.1)(vite@4.5.5(sass@1.69.4))':
     dependencies:
       '@babel/core': 7.23.2
       '@prefresh/babel-plugin': 0.5.0
@@ -904,7 +904,7 @@ snapshots:
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
       preact: 10.18.1
-      vite: 4.5.2(sass@1.69.4)
+      vite: 4.5.5(sass@1.69.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -1159,7 +1159,7 @@ snapshots:
       escalade: 3.1.1
       picocolors: 1.0.0
 
-  vite@4.5.2(sass@1.69.4):
+  vite@4.5.5(sass@1.69.4):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.31
